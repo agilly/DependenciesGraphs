@@ -44,7 +44,7 @@ shinyServer(function(input, output, session) {
                   net <- plot(data, block = TRUE)
                   
                   # add legend
-                  data_legend <- unique(data2$fromto[, c("title", "color")])
+                  data_legend <- unique(data$fromto[, c("title", "color")])
                   data_legend$label <- gsub("<p>", "", data_legend$title, fixed = TRUE)
                   data_legend$label <- gsub("</p>", "", data_legend$label, fixed = TRUE)
                   data_legend$title <- NULL
